@@ -1,12 +1,8 @@
 // Smooth Scrolling
-document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+}
 
 // Dynamic Background Color Change on Scroll
 window.addEventListener("scroll", () => {
